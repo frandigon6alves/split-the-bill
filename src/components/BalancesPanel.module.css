@@ -1,4 +1,4 @@
-.row {
+li.row {
   display: grid;
   grid-template-columns: 1fr auto;
   row-gap: var(--space-1);
