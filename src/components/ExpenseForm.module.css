@@ -1,0 +1,139 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-3);
+}
+
+.description,
+.full {
+  grid-column: 1 / -1;
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.fieldset > legend {
+  padding: 0;
+  margin-bottom: var(--space-2);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+}
+
+.segment {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--tap-target) - 0.5rem);
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.segment input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.segment:has(input:checked) {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-card);
+}
+
+.segment:has(input:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chip input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--color-accent);
+}
+
+.chip:has(input:checked) {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.fieldset[aria-invalid='true'] .chip {
+  border-color: var(--color-negative);
+}
+
+.shares {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.shareRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.shareInput {
+  width: 8rem;
+  flex: none;
+}
+
+.remaining {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.balanced {
+  background: var(--color-positive-soft);
+  color: var(--color-positive);
+}
+
+.unbalanced {
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
