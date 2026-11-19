@@ -1,0 +1,75 @@
+import type { Message } from '../types';
+import type { MessageKey } from './en';
+
+export const ptBR: Record<MessageKey, Message> = {
+  'app.title': 'Dividir a conta',
+  'app.tagline':
+    'Divida os gastos de forma justa e acerte as contas com o menor número de pagamentos.',
+  'settings.label': 'Configurações',
+  'settings.language': 'Idioma',
+  'settings.currency': 'Moeda',
+  'group.nameLabel': 'Nome do grupo',
+  'group.namePlaceholder': 'ex.: Viagem a Lisboa',
+  'group.reset': 'Recomeçar',
+  'group.resetConfirm': 'Remover todas as pessoas e despesas? Não é possível desfazer.',
+
+  'people.heading': 'Pessoas',
+  'people.nameLabel': 'Nome',
+  'people.namePlaceholder': 'ex.: Ana',
+  'people.add': 'Adicionar pessoa',
+  'people.remove': 'Remover {name}',
+  'people.empty': 'Adicione as pessoas que dividem os gastos para começar.',
+  'people.count': { one: '{count} pessoa', other: '{count} pessoas' },
+  'people.error.empty': 'Digite um nome.',
+  'people.error.duplicate': '{name} já está no grupo.',
+  'people.error.inUse': '{name} participa de uma despesa. Exclua essas despesas primeiro.',
+
+  'expense.heading': 'Adicionar despesa',
+  'expense.needPeople': 'Adicione pelo menos uma pessoa antes de lançar despesas.',
+  'expense.description': 'Descrição',
+  'expense.descriptionPlaceholder': 'ex.: Jantar',
+  'expense.amount': 'Valor',
+  'expense.paidBy': 'Pago por',
+  'expense.splitMode': 'Divisão',
+  'expense.splitEqual': 'Igualmente',
+  'expense.splitCustom': 'Valores personalizados',
+  'expense.participants': 'Dividido entre',
+  'expense.shareFor': 'Parte de {name}',
+  'expense.remaining': 'Faltam {amount} para distribuir',
+  'expense.over': '{amount} acima do total',
+  'expense.balanced': 'As partes somam o total',
+  'expense.add': 'Adicionar despesa',
+  'expense.added': '“{description}” adicionada.',
+  'expense.error.description': 'Digite uma descrição.',
+  'expense.error.amount': 'Digite um valor maior que zero, como 12,50.',
+  'expense.error.participants': 'Escolha pelo menos uma pessoa para dividir.',
+  'expense.error.share': 'Digite um valor válido para cada parte.',
+  'expense.error.shares': 'As partes personalizadas precisam somar o total.',
+
+  'expenses.heading': 'Despesas',
+  'expenses.empty': 'Nenhuma despesa ainda.',
+  'expenses.count': { one: '{count} despesa', other: '{count} despesas' },
+  'expenses.total': 'Total gasto: {amount}',
+  'expenses.paidBy': '{name} pagou {amount}',
+  'expenses.sharedBy': { one: 'para {count} pessoa', other: 'dividido entre {count} pessoas' },
+  'expenses.remove': 'Excluir “{description}”',
+
+  'balances.heading': 'Saldos',
+  'balances.empty': 'Os saldos aparecem quando você adiciona pessoas.',
+  'balances.getsBack': 'recebe {amount}',
+  'balances.owes': 'deve {amount}',
+  'balances.even': 'está quite',
+
+  'settle.heading': 'Acertar as contas',
+  'settle.summary': {
+    one: '{count} pagamento resolve tudo.',
+    other: '{count} pagamentos resolvem tudo.',
+  },
+  'settle.done': 'Está tudo acertado.',
+  'settle.pays': '{from} paga {amount} para {to}',
+  'settle.note':
+    'Usa o menor número de pagamentos possível. Os valores são calculados em centavos.',
+
+  'footer.storage': 'Seus dados ficam só neste navegador.',
+  'footer.source': 'Código-fonte',
+};
